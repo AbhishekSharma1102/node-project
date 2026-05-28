@@ -1,3 +1,5 @@
+echo 'Building Application'
+with:
 pipeline {
    agent any
 
@@ -11,7 +13,7 @@ pipeline {
 
        stage('Run') {
            steps {
-               sh 'node index.js'
+               sh 'node app.js'
            }
        }
 
