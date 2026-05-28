@@ -1,1 +1,10 @@
-console.log("hello jenkins pipeline")
+const http = require('http');
+
+const server = http.createServer((req,res)=>{
+   res.writeHead(200,{'Content-Type':'text/plain'});
+   res.end("Hello from PM2 deployed app");
+});
+
+server.listen(3000,()=>{
+   console.log("Server running on port 3000");
+});
