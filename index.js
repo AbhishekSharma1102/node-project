@@ -1,10 +1,15 @@
 const http = require('http');
 
-const server = http.createServer((req,res)=>{
-   res.writeHead(200,{'Content-Type':'text/plain'});
-   res.end("Hello from PM2 deployed app");
+const server = http.createServer((req, res) => {
+
+   res.write("Hello from Jenkins Auto Deployment");
+
+   res.end();
+
 });
 
-server.listen(3000,()=>{
+server.listen(3000, '0.0.0.0', () => {
+
    console.log("Server running on port 3000");
+
 });
